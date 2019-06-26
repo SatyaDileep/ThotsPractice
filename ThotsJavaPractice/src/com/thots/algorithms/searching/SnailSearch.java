@@ -5,13 +5,14 @@ package com.thots.algorithms.searching;
 
 import java.util.Scanner;
 
+import com.thots.utils.ArrayUtils;
 import com.thots.utils.FormRandomArrays;
 
 /**
  * @author thots
  * Hey there don't get confused with the name.. I'm just the old fashioned linear search
  */
-public class SnailSearch {
+public class SnailSearch implements SearchingAlgorithms{
 
 	/**
 	 * @param args
@@ -25,27 +26,16 @@ public class SnailSearch {
 		int[] inputArray = FormRandomArrays.getArrayData(limit, 100);
 		
 		// just print and see
-		printArray(inputArray);
+		ArrayUtils.printArray(inputArray);
 		
 		// lets ask for the target..
 		System.out.println("Enter the number to search for.. \n");
 		int target = scanner.nextInt();
 		SnailSearch snailSearch = new SnailSearch();
-		System.out.println(snailSearch.searchForTarget(inputArray, target));
-	}
-	
-	/*
-	 * Pretty print the given array
-	 */
-	private static void printArray(int[] givenArray) {
-		System.out.print("[");
-		for(int i=0; i<givenArray.length; i++) {
-			if(i==givenArray.length-1)
-				System.out.print(givenArray[i]);
-			else
-				System.out.print(givenArray[i]+",");
-		}
-		System.out.print("]");
+		
+		int indexFoundAt = snailSearch.searchForTarget(inputArray, target);
+		String outputMessage = indexFoundAt == -1 ? "target not found" : "target found at position : "+(indexFoundAt+1);
+		System.out.println(outputMessage);
 	}
 	
 	/**
@@ -53,7 +43,7 @@ public class SnailSearch {
 	 * @param target
 	 * @return if element is found at a position, returns the position else nope
 	 */
-	public String searchForTarget(int[] givenArray, int target) {
+	public int searchForTarget(int[] givenArray, int target) {
 		int index = -1;
 		for(int i=0; i<givenArray.length; i++) {
 			if(givenArray[i] == target) {
@@ -61,7 +51,7 @@ public class SnailSearch {
 				break;
 			}
 		}
-		return index == -1 ? "target not found" : "target found at position : "+(index+1);
+		return index;
 	}
 
 }
