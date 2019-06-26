@@ -26,6 +26,6 @@ public class FormRandomArrays {
 	
 	public static void main(String a[]) {
 		// doubt it? just execute me and see
-		getArrayData(5,-1);
+		getArrayData(10,-1);
 	}
 }

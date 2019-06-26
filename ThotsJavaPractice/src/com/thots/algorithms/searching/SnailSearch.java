@@ -18,26 +18,31 @@ public class SnailSearch implements SearchingAlgorithms{
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+
 		System.out.println("Enter the number of elements in the array.. \n");
 		Scanner scanner = new Scanner(System.in);
 		int limit = scanner.nextInt();
-		// form random array first
-		int[] inputArray = FormRandomArrays.getArrayData(limit, 100);
-		
-		// just print and see
-		ArrayUtils.printArray(inputArray);
-		
-		// lets ask for the target..
-		System.out.println("Enter the number to search for.. \n");
-		int target = scanner.nextInt();
-		SnailSearch snailSearch = new SnailSearch();
-		
-		int indexFoundAt = snailSearch.searchForTarget(inputArray, target);
-		String outputMessage = indexFoundAt == -1 ? "target not found" : "target found at position : "+(indexFoundAt+1);
-		System.out.println(outputMessage);
+		if(limit > 0) {
+			// form random array first
+			int[] inputArray = FormRandomArrays.getArrayData(limit, 100);
+
+			// just print and see
+			ArrayUtils.printArray(inputArray);
+
+			// lets ask for the target..
+			System.out.println("Enter the number to search for.. \n");
+			int target = scanner.nextInt();
+			SnailSearch snailSearch = new SnailSearch();
+
+			int indexFoundAt = snailSearch.searchForTarget(inputArray, target);
+			String outputMessage = indexFoundAt == -1 ? "target not found" : "target found at position : "+(indexFoundAt+1);
+			System.out.println(outputMessage);
+		}
+		else {
+			System.out.println(" When you cannot afford to form an array why searchin?");
+		}
 	}
-	
+
 	/**
 	 * @param givenArray
 	 * @param target
