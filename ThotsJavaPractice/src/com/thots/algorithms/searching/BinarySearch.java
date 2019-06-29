@@ -44,6 +44,11 @@ public class BinarySearch implements SearchingAlgorithms {
 			int indexFoundAt = binarySearch.searchForTarget(inputArray, target);
 			String outputMessage = indexFoundAt == -1 ? "target not found" : "target found at position : "+(indexFoundAt+1)+"  of the array";
 			System.out.println(outputMessage);
+			
+			System.out.println("searching using iterator way");
+			indexFoundAt = binarySearch.searchForTarget(inputArray, target);
+			outputMessage = indexFoundAt == -1 ? "target not found" : "target found at position : "+(indexFoundAt+1)+"  of the array";
+			System.out.println(outputMessage);
 		}
 		else {
 			System.out.println(" When you cannot afford to form an array why searchin?");
@@ -61,7 +66,7 @@ public class BinarySearch implements SearchingAlgorithms {
 			return 0;
 		else if (target == givenArray[arrayLength-1])
 			return givenArray.length;
-		return binarySearchImpl(givenArray, 0, arrayLength-1, target);
+		return binarySearchUsingRecursion(givenArray, 0, arrayLength-1, target);
 	}
 
 	/**
@@ -72,22 +77,48 @@ public class BinarySearch implements SearchingAlgorithms {
 	 * @param target - element to search for
 	 * @return if element is found at a position, returns the position else nope
 	 */
-	public int binarySearchImpl(int[] givenArray, int left, int right, int target) {
-		System.out.println(right +" // "+left);
+	public int binarySearchUsingRecursion(int[] givenArray, int left, int right, int target) {
 		// if right is less than left it means the pivots are swapped => element not found
 		if(right >= left) {
 			int mid = left+ (right - left)/2;
-			System.out.println(mid);
 			if(givenArray[mid] == target) {
 				return mid;
 			}
 			else if(givenArray[mid] > target){
 				// target is in the left most part recalculate
-				return binarySearchImpl(givenArray, left, mid-1, target);
+				return binarySearchUsingRecursion(givenArray, left, mid-1, target);
 			}
 			else {
 				// target is in the right most part recalculate
-				return binarySearchImpl(givenArray, mid+1, right, target);
+				return binarySearchUsingRecursion(givenArray, mid+1, right, target);
+			}
+		}
+		return -1;
+	}
+	
+	/**
+	 * Recursive binary search implementation to halve the given array and search for index
+	 * @param givenArray
+	 * @param left 
+	 * @param right
+	 * @param target - element to search for
+	 * @return if element is found at a position, returns the position else nope
+	 */
+	public int binarySearchUsingIteration(int[] givenArray, int left, int right, int target) {
+		System.out.println(right +" // "+left);
+		// if right is less than left it means the pivots are swapped => element not found
+		while(right >= left) {
+			int mid = left+ (right - left)/2;
+			if(givenArray[mid] == target) {
+				return mid;
+			}
+			else if(givenArray[mid] > target){
+				// target is in the left most part recalculate right index val
+				right = mid-1;
+			}
+			else {
+				// target is in the right most part recalculate
+				left = mid + 1;
 			}
 		}
 		return -1;
