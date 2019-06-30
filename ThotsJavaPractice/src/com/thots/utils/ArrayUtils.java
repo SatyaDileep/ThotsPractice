@@ -21,6 +21,7 @@ public class ArrayUtils {
 	 * Pretty print the given array
 	 */
 	public static void printArray(int[] givenArray) {
+		System.out.println("given array's length is "+givenArray.length);
 		System.out.print("[");
 		for(int i=0; i<givenArray.length; i++) {
 			if(i==givenArray.length-1)
@@ -29,6 +30,17 @@ public class ArrayUtils {
 				System.out.print(givenArray[i]+",");
 		}
 		System.out.print("]");
+		
+		System.out.println();
+		System.out.print("[");
+		for(int i=0; i<givenArray.length; i++) {
+			if(i==givenArray.length-1)
+				System.out.print(i);
+			else
+				System.out.print(i+",");
+		}
+		System.out.print("]");
+		System.out.println();
 	}
 
 }
