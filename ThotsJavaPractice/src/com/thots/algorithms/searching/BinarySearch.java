@@ -15,6 +15,7 @@ import com.thots.utils.FormRandomArrays;
  */
 public class BinarySearch implements SearchingAlgorithms {
 
+	static int iterativeCounter = 0;
 	/**
 	 * @param args
 	 */
@@ -46,9 +47,10 @@ public class BinarySearch implements SearchingAlgorithms {
 			System.out.println(outputMessage);
 			
 			System.out.println("searching using iterator way");
-			indexFoundAt = binarySearch.searchForTarget(inputArray, target);
+			indexFoundAt = binarySearch.binarySearchUsingIteration(inputArray, 0, inputArray.length-1, target);
 			outputMessage = indexFoundAt == -1 ? "target not found" : "target found at position : "+(indexFoundAt+1)+"  of the array";
 			System.out.println(outputMessage);
+			System.out.println("number of comparisions using iterative approach : "+iterativeCounter);
 		}
 		else {
 			System.out.println(" When you cannot afford to form an array why searchin?");
@@ -97,7 +99,7 @@ public class BinarySearch implements SearchingAlgorithms {
 	}
 	
 	/**
-	 * Recursive binary search implementation to halve the given array and search for index
+	 * Iterative binary search implementation to halve the given array and search for index
 	 * @param givenArray
 	 * @param left 
 	 * @param right
@@ -105,10 +107,11 @@ public class BinarySearch implements SearchingAlgorithms {
 	 * @return if element is found at a position, returns the position else nope
 	 */
 	public int binarySearchUsingIteration(int[] givenArray, int left, int right, int target) {
-		System.out.println(right +" // "+left);
 		// if right is less than left it means the pivots are swapped => element not found
 		while(right >= left) {
+			iterativeCounter++;
 			int mid = left+ (right - left)/2;
+			System.out.println(iterativeCounter+" -- mid is at -- "+mid);
 			if(givenArray[mid] == target) {
 				return mid;
 			}
