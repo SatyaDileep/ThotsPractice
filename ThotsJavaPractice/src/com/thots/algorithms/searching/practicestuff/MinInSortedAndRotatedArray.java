@@ -21,7 +21,7 @@ public class MinInSortedAndRotatedArray {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[] inputArray = {115, 106, 97,0, -92, 93, 94};
+		int[] inputArray = {115, 116, 197,-92, 0, 93, 94};
 		ArrayUtils.printArray(inputArray);
 		System.out.println(minElementInArray(inputArray));
 	}
