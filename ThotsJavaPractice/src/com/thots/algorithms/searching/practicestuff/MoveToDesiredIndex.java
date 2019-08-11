@@ -5,6 +5,8 @@ package com.thots.algorithms.searching.practicestuff;
 
 import java.util.Scanner;
 
+import javax.xml.transform.Templates;
+
 import com.thots.utils.ArrayUtils;
 
 /**
@@ -22,33 +24,40 @@ public class MoveToDesiredIndex {
 		System.out.println("Enter the index from which the element has to be moved ");
 		int index = s.nextInt();
 		System.out.println("Enter the target index to which the element has to be moved ");
-		int targetIndex = s.nextInt();
+		int desiredIndex = s.nextInt();
 		ArrayUtils.printArray(givenArray);
-		//
-		moveIndexToDesiredPosition(givenArray, index, targetIndex);
+		moveIndexToDesiredPosition(givenArray, index, desiredIndex);
 		ArrayUtils.printArray(givenArray);
+		s.close();
 	}
 	
-	private static void moveIndexToDesiredPosition(int[] arr, int index, int targetIndex) {
-		int i, temp;
-		if(index > targetIndex) {
-			i = index-1;
-			temp = arr[index];
-			while(i >= targetIndex) {
-				arr[i+1] = arr[i];
-				i--;
+	private static void moveIndexToDesiredPosition(int[] arr, int index, int desiredIndex) {
+		int ourTargetToMove = arr[index];
+		if(index > desiredIndex) {
+			// move the element backward..! 
+			while(index > desiredIndex) {
+				System.out.println("index is at : "+index);
+				arr[index] = arr[index-1];
+				ArrayUtils.printArray(arr);
+				index--;
 			}
-			arr[i+1] = temp;
+			System.out.println("reached the target index: "+index);
+			// so copy back our target to desired index..!
+			arr[index] = ourTargetToMove;
 		}
 		else {
-			i = index+1;
-			temp = arr[index];
-			while(i <= targetIndex) {
-				arr[i-1] = arr[i];
-				i++;
+			// move the element forward..! 
+			while(index < desiredIndex) {
+				System.out.println("index is at : "+index);
+				arr[index] = arr[index+1];
+				ArrayUtils.printArray(arr);
+				index++;
 			}
-			arr[i-1] = temp;
+			System.out.println("reached the target index: "+index);
+			// so copy back our target to desired index..!
+			arr[index] = ourTargetToMove;
 		}
 	}
+	
 
 }
