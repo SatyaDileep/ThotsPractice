@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.thots.algorithms.searching.practicestuff;
+package com.thots.algorithms.searching.practiceprograms;
 
 import java.util.Scanner;
 

@@ -6,7 +6,7 @@ package com.thots.utils;
 /**
  * @author thots
  * Contains a static method to return random arrays of specified size within the range of 0 till multiplying index.
- * Ex : getArrayData(5,1000); returns an array of 5 numbers raning from 0 till 1000
+ * Ex : getArrayData(5,1000); returns an array of 5 numbers ranging from 0 till 1000
  */
 public class FormRandomArrays {
 	/**
