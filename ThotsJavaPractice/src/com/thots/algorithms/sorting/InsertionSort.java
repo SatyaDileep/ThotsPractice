@@ -22,7 +22,6 @@ public class InsertionSort {
 			// just print and see
 			ArrayUtils.printArray(inputArray);
 
-			// call bubblesort damnit..!
 			performInsertionSort(inputArray);
 			
 			// post sorting
@@ -40,26 +39,17 @@ public class InsertionSort {
 	 * @param inputArray
 	 */
 	private static void performInsertionSort(int[] inputArray) {
-		int minIndex;
+		int minimumElementSoFar;
 		int arrayLength = inputArray.length;
-		int swapCounter = 0;
 		for(int i=0; i< arrayLength-1; i++) {
-			minIndex = i;
-			for(int j=i+1; j< arrayLength; j++) {
-				if(inputArray[j] < inputArray[minIndex]) {
-					// found an index that is minimum element, remember that for swapping
-					minIndex = j;
-				}
+			minimumElementSoFar = inputArray[i];
+			int j = i+1;
+			while(inputArray[j] > minimumElementSoFar) {
+				inputArray[j+1] = inputArray[j];
+				j = j-1;
 			}
-			if(minIndex != i) {
-				// now swap..!
-				int temp = inputArray[minIndex];
-				inputArray[minIndex] = inputArray[i];
-				inputArray[i] = temp;
-				swapCounter++;
-			}
+			inputArray[j] = minimumElementSoFar;
 			ArrayUtils.printArray(inputArray);
 		}
-		System.out.println("Number of swaps done : "+swapCounter);
 	}
 }

@@ -41,7 +41,6 @@ public class StableSelectionSort {
 			// just print and see
 			ArrayUtils.printArray(inputArray);
 
-			// call bubblesort damnit..!
 			performStableSelectionSort(inputArray);
 			
 			// post sorting
@@ -56,7 +55,7 @@ public class StableSelectionSort {
 	 * @param inputArray
 	 */
 	private static void performStableSelectionSort(int[] inputArray) {
-		System.out.println("Begin the fucking stable sort");
+		System.out.println("Begin the stable sort");
 		int minIndex;
 		int arrayLength = inputArray.length;
 		for(int i=0; i< arrayLength-1; i++) {

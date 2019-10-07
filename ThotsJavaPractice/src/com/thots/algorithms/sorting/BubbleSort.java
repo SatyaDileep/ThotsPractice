@@ -23,7 +23,6 @@ public class BubbleSort {
 			// just print and see
 			ArrayUtils.printArray(inputArray);
 
-			// call bubblesort damnit..!
 			performBubbleSort(inputArray);
 			
 			// post sorting

@@ -22,7 +22,6 @@ public class SelectionSort {
 			// just print and see
 			ArrayUtils.printArray(inputArray);
 
-			// call bubblesort damnit..!
 			performSelectionSort(inputArray);
 			
 			// post sorting
