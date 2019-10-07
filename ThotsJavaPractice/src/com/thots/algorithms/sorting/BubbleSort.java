@@ -18,7 +18,7 @@ public class BubbleSort {
 		int limit = scanner.nextInt();
 		if(limit > 0) {
 			// form random array first
-			int[] inputArray = new int[] {20, 15, 15};//FormRandomArrays.getArrayData(limit, 100);
+			int[] inputArray = FormRandomArrays.getArrayData(limit, 1000); //new int[] {20, 15, 15};
 
 			// just print and see
 			ArrayUtils.printArray(inputArray);
@@ -35,7 +35,8 @@ public class BubbleSort {
 	 * Algo : set i at end of the array, start off from the beginning using j
 	 * Consider water bubbles as j,j+1 -> 
 	 * compare them if current element is greater than next index, swap them else continue
-	 * Keep doing this until j reaches i ( by this time all of them gets 
+	 * Keep doing this until j reaches i ( by this time j+1 which is i will already be compared and sorted
+	 * O(n^2) - worst case
 	 * @param inputArray
 	 */
 	private static void performBubbleSort(int[] inputArray) {
@@ -44,13 +45,13 @@ public class BubbleSort {
 				System.out.println("j is at : "+j+" and i is at "+i);
 				if(inputArray[j] > inputArray[j+1]) {
 					// next element is greater than current element swap'em off
-					int temp = inputArray[j];
-					inputArray[j] = inputArray[j+1];
-					inputArray[j+1] = temp;
+					ArrayUtils.swapValuesInArray(inputArray, j);
 				}
 			}
 			ArrayUtils.printArray(inputArray);
 		}
 	}
+
+	
 
 }

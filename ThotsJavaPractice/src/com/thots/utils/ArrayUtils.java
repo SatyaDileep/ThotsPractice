@@ -21,7 +21,7 @@ public class ArrayUtils {
 	 * Pretty print the given array
 	 */
 	public static void printArray(int[] givenArray) {
-		System.out.println("given array's length is "+givenArray.length);
+		//System.out.println("given array's length is "+givenArray.length);
 		System.out.print("[");
 		for(int i=0; i<givenArray.length; i++) {
 			if(i==givenArray.length-1)
@@ -41,6 +41,16 @@ public class ArrayUtils {
 		}
 		System.out.print("]");
 		System.out.println();
+	}
+	
+	/**
+	 * @param inputArray
+	 * @param currentIndex
+	 */
+	public static void swapValuesInArray(int[] inputArray, int currentIndex) {
+		int temp = inputArray[currentIndex];
+		inputArray[currentIndex] = inputArray[currentIndex+1];
+		inputArray[currentIndex+1] = temp;
 	}
 
 }
