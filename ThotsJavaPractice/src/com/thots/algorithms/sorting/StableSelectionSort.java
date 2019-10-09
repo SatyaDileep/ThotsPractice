@@ -67,7 +67,7 @@ public class StableSelectionSort {
 				}
 			}
 			if(minIndex != i) {
-				// remember the element at minIndex
+				// remember the element at minIndex and shift elements from i till minIndex to the right
 				int minimumElement = inputArray[minIndex];
 				while(minIndex > i) {
 					inputArray[minIndex] = inputArray[minIndex-1];

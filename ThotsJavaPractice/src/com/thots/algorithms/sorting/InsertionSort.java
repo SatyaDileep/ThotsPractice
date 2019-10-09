@@ -33,23 +33,23 @@ public class InsertionSort {
 	 * Base of this algorithm is 
 	 * a. As and when we find a min element, insert it at the desired index and shift all others forward.
 	 * 
-	 * Algo : set i at start of the array, start off from i+1 using j
-	 * Find minimum index from j till end and mark it for swapping with element at i 
+	 * Algo : set i at 1, start off from i-1 using j
 	 * O(n^2) - worst case
 	 * @param inputArray
 	 */
 	private static void performInsertionSort(int[] inputArray) {
 		int minimumElementSoFar;
 		int arrayLength = inputArray.length;
-		for(int i=0; i< arrayLength-1; i++) {
+		// start i at 1 and j from i-1'th index
+		for(int i=1; i< arrayLength; i++) {
 			minimumElementSoFar = inputArray[i];
-			int j = i+1;
-			while(inputArray[j] > minimumElementSoFar) {
+			int j = i-1;
+			// as long as found minimum is less than elements from j'th index, shift elements 
+			while(j>=0 && inputArray[j] > minimumElementSoFar) {
 				inputArray[j+1] = inputArray[j];
-				j = j-1;
+				j=j-1;
 			}
-			inputArray[j] = minimumElementSoFar;
-			ArrayUtils.printArray(inputArray);
+			inputArray[j+1] = minimumElementSoFar;
 		}
 	}
 }

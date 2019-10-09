@@ -52,7 +52,7 @@ public class SelectionSort {
 				}
 			}
 			if(minIndex != i) {
-				// now swap..!
+				// now swap minIndex with i'th index..!
 				int temp = inputArray[minIndex];
 				inputArray[minIndex] = inputArray[i];
 				inputArray[i] = temp;

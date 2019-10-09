@@ -41,16 +41,14 @@ public class BubbleSort {
 	private static void performBubbleSort(int[] inputArray) {
 		for(int i=inputArray.length-1; i>=0; i--) {
 			for(int j=0; j<i; j++) {
-				System.out.println("j is at : "+j+" and i is at "+i);
+				//System.out.println("j is at : "+j+" and i is at "+i);
 				if(inputArray[j] > inputArray[j+1]) {
-					// next element is greater than current element swap'em off
+					// next element is lesser than current element swap'em off -> ex : 6 4
 					ArrayUtils.swapValuesInArray(inputArray, j);
 				}
 			}
 			ArrayUtils.printArray(inputArray);
 		}
 	}
-
 	
-
 }
