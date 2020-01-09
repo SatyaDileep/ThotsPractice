@@ -10,7 +10,7 @@ import com.thots.utils.FormRandomArrays;
 
 /**
  * @author thots
- * Hey there don't get confused with the name.. I'm just the old fashioned linear search
+ * Hey there don't get confused with the name.. I'm just the old fashioned linear search lol
  */
 public class SnailSearch implements SearchingAlgorithms{
 
