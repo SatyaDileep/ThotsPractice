@@ -15,7 +15,7 @@ import com.thots.utils.FormRandomArrays;
  * 
  * Selection sort works by finding the minimum element and then inserting it in its correct position by 
  * swapping with the element which is in the position of this minimum element. This is what makes it unstable.
- * Swapping might impact in pushing a key(let’s say A) to a position greater than the key(let’s say B) which are equal keys.
+ * Swapping might impact in pushing a key(letï¿½s say A) to a position greater than the key(letï¿½s say B) which are equal keys.
  * Which makes them out of desired order.
  * Selection sort can be made Stable if instead of swapping, the minimum element is placed in its position without swapping i.e.
  * by placing the number in its position by pushing every element one step forward.
@@ -46,6 +46,7 @@ public class StableSelectionSort {
 			// post sorting
 			ArrayUtils.printArray(inputArray);
 		}
+		scanner.close();
 	}
 
 	/**

@@ -5,8 +5,6 @@ package com.thots.algorithms.searching.practiceprograms;
 
 import java.util.Scanner;
 
-import javax.xml.transform.Templates;
-
 import com.thots.utils.ArrayUtils;
 
 /**

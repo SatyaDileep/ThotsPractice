@@ -27,6 +27,7 @@ public class SelectionSort {
 			// post sorting
 			ArrayUtils.printArray(inputArray);
 		}
+		scanner.close();
 	}
 
 	/**

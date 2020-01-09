@@ -1,6 +1,5 @@
 package com.thots.algorithms.sorting;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import com.thots.utils.ArrayUtils;
@@ -28,6 +27,7 @@ public class BubbleSort {
 			// post sorting
 			ArrayUtils.printArray(inputArray);
 		}
+		scanner.close();
 	}
 
 	/**

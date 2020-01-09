@@ -53,6 +53,7 @@ public class NodePractice {
 		initializeNodeArray();
 		// done with initializing -- lets iterate and print
 		printNodeArray();
+		scanEmUp.close();
 	}
 	/**
 	 * 

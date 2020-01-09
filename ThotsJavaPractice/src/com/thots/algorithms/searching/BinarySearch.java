@@ -55,6 +55,7 @@ public class BinarySearch implements SearchingAlgorithms {
 		else {
 			System.out.println(" When you cannot afford to form an array why searchin?");
 		}
+		scanner.close();
 	}
 
 	/**

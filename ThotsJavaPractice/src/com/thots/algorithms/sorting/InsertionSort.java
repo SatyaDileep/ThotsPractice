@@ -27,6 +27,7 @@ public class InsertionSort {
 			// post sorting
 			ArrayUtils.printArray(inputArray);
 		}
+		scanner.close();
 	}
 
 	/**

@@ -23,9 +23,9 @@ public class FrequencyCountInArray {
 
 	public static void main(String[] args) {
 		int[] inputArray1 = {1, 1, 1, 2, 2, 2, 2, 3, 3, 4};
-		int[] inputArray2 = {1, 2, 2, 2, 3, 3, 4};
+		/*int[] inputArray2 = {1, 2, 2, 2, 3, 3, 4};
 		int[] inputArray3 = {1, 1, 2, 4, 4, 5, 5};
-		int[] inputArray4 = {1, 1, 2, 3, 3, 4, 6};
+		int[] inputArray4 = {1, 1, 2, 3, 3, 4, 6};*/
 		
 		int frequencyOfNumberInArray = linearApproach(inputArray1, 2);
 		System.out.println("Frequency of 2 in the array using linear approach :"+frequencyOfNumberInArray);
