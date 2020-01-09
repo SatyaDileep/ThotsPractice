@@ -1,2 +1,2 @@
 # ThotsPractice
-I'll keep this damn thing updating as I practice.. read thru packages to understand the grouping
+Practice Java - once a java dev... always will be a java dev..!
