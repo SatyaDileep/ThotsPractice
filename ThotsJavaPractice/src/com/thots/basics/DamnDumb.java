@@ -1,5 +1,7 @@
 package com.thots.basics;
-
+/**
+ * This class is just a dummy to execute any code that comes to mind for reference
+ */
 public class DamnDumb {
 
 	public static void main(String a[]) {
