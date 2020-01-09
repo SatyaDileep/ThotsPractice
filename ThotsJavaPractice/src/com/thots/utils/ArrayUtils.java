@@ -1,5 +1,5 @@
 /**
- * 
+ * This utils class is just to pretty print an array - yet its still ugly and pretty basic.
  */
 package com.thots.utils;
 
@@ -14,7 +14,7 @@ public class ArrayUtils {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 	}
 	
 	/*
