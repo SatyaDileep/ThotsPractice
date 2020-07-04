@@ -59,17 +59,17 @@ public class BinarySearch implements SearchingAlgorithms {
 	}
 
 	/**
-	 * @param givenArray
+	 * @param inputArray
 	 * @param target
 	 * @return if element is found at a position, returns the position else nope
 	 */
-	public int searchForTarget(int[] givenArray, int target) {
-		int arrayLength = givenArray.length;
-		if(target == givenArray[0])
+	public int searchForTarget(int[] inputArray, int target) {
+		int arrayLength = inputArray.length;
+		if(target == inputArray[0])
 			return 0;
-		else if (target == givenArray[arrayLength-1])
-			return givenArray.length;
-		return binarySearchUsingRecursion(givenArray, 0, arrayLength-1, target);
+		else if (target == inputArray[arrayLength-1])
+			return inputArray.length;
+		return binarySearchUsingRecursion(inputArray, 0, arrayLength-1, target);
 	}
 
 	/**
@@ -101,22 +101,22 @@ public class BinarySearch implements SearchingAlgorithms {
 	
 	/**
 	 * Iterative binary search implementation to halve the given array and search for index
-	 * @param givenArray
+	 * @param inputArray
 	 * @param left 
 	 * @param right
 	 * @param target - element to search for
 	 * @return if element is found at a position, returns the position else nope
 	 */
-	public int binarySearchUsingIteration(int[] givenArray, int left, int right, int target) {
+	public int binarySearchUsingIteration(int[] inputArray, int left, int right, int target) {
 		// if right is less than left it means the pivots are swapped => element not found
 		while(right >= left) {
 			iterativeCounter++;
 			int mid = left+ (right - left)/2;
 			System.out.println(iterativeCounter+" -- mid is at -- "+mid);
-			if(givenArray[mid] == target) {
+			if(inputArray[mid] == target) {
 				return mid;
 			}
-			else if(givenArray[mid] > target){
+			else if(inputArray[mid] > target){
 				// target is in the left most part recalculate right index val
 				right = mid-1;
 			}

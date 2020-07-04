@@ -45,14 +45,14 @@ public class SnailSearch implements SearchingAlgorithms{
 	}
 
 	/**
-	 * @param givenArray
+	 * @param inputArray
 	 * @param target
 	 * @return if element is found at a position, returns the position else nope
 	 */
-	public int searchForTarget(int[] givenArray, int target) {
+	public int searchForTarget(int[] inputArray, int target) {
 		int index = -1;
-		for(int i=0; i<givenArray.length; i++) {
-			if(givenArray[i] == target) {
+		for(int i=0; i<inputArray.length; i++) {
+			if(inputArray[i] == target) {
 				index = i;
 				break;
 			}
