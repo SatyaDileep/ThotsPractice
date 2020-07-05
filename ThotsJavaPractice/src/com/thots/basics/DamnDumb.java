@@ -4,8 +4,8 @@ package com.thots.basics;
  */
 public class DamnDumb {
 
-	public static void main(String a[]) {
-		MyAbstractTest myAbstractTest = new MyAbstractTest();
+	public static void main(final String a[]) {
+		final MyAbstractTest myAbstractTest = new MyAbstractTest();
 		myAbstractTest.tempMethod();
 	}
 	
@@ -13,8 +13,13 @@ public class DamnDumb {
 }
 
 abstract class AbstractTest{
+	int myIntegerField;
 	public AbstractTest() {
-		System.out.println("oh man..!");
+		myIntegerField = 6775;
+		System.out.println("I was called from the default constructor of my child..!");
+	}
+	public AbstractTest(int a, int b){
+		System.out.println("lets see what happens "+a+b);
 	}
 	public void someRandomShit() {
 		System.out.println("uhhhh leave it");
@@ -25,8 +30,8 @@ abstract class AbstractTest{
 class MyAbstractTest extends AbstractTest{
 
 	public  MyAbstractTest() {
-		super();
-		System.out.println("oooo");
+		//super();
+		System.out.println("We can use the field here.."+myIntegerField);
 	}
 	@Override
 	void tempMethod() {
