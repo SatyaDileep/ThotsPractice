@@ -37,7 +37,7 @@ public class ArrayUtils {
 			if (i == givenArray.length - 1)
 				System.out.print(i);
 			else {
-				if (givenArray[i] < 9)
+				if (givenArray[i] <= 9)
 					System.out.print(i + ",");
 				else
 					System.out.print(" "+i + ",");
