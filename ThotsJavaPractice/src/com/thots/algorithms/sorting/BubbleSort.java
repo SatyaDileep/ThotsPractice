@@ -44,7 +44,7 @@ public class BubbleSort {
 				//System.out.println("j is at : "+j+" and i is at "+i);
 				if(inputArray[j] > inputArray[j+1]) {
 					// next element is lesser than current element swap'em off -> ex : 6 4
-					ArrayUtils.swapValuesInArray(inputArray, j);
+					ArrayUtils.swapConsecutiveValuesInArray(inputArray, j);
 				}
 			}
 			ArrayUtils.printArray(inputArray);

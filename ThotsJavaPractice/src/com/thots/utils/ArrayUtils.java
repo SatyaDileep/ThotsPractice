@@ -50,11 +50,17 @@ public class ArrayUtils {
 	/**
 	 * @param inputArray
 	 * @param currentIndex
+	 * Swaps currentIndex element with the next element
 	 */
-	public static void swapValuesInArray(int[] inputArray, int currentIndex) {
+	public static void swapConsecutiveValuesInArray(int[] inputArray, int currentIndex) {
 		int temp = inputArray[currentIndex];
 		inputArray[currentIndex] = inputArray[currentIndex + 1];
 		inputArray[currentIndex + 1] = temp;
 	}
 
+	public static void swapValuesAtSpecifiedIndices(int[] inputArray, int currentIndex, int targetIndex) {
+        int temp = inputArray[currentIndex];
+        inputArray[currentIndex] = inputArray[targetIndex];
+        inputArray[targetIndex] = temp;
+    }
 }
