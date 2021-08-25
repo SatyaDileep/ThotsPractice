@@ -13,7 +13,6 @@ public class ArrayUtils {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -40,7 +39,7 @@ public class ArrayUtils {
 				if (givenArray[i] <= 9)
 					System.out.print(i + ",");
 				else
-					System.out.print(" "+i + ",");
+					System.out.print(" " + i + ",");
 			}
 		}
 		System.out.print("]");
@@ -49,8 +48,7 @@ public class ArrayUtils {
 
 	/**
 	 * @param inputArray
-	 * @param currentIndex
-	 * Swaps currentIndex element with the next element
+	 * @param currentIndex Swaps currentIndex element with the next element
 	 */
 	public static void swapConsecutiveValuesInArray(int[] inputArray, int currentIndex) {
 		int temp = inputArray[currentIndex];
@@ -59,8 +57,8 @@ public class ArrayUtils {
 	}
 
 	public static void swapValuesAtSpecifiedIndices(int[] inputArray, int currentIndex, int targetIndex) {
-        int temp = inputArray[currentIndex];
-        inputArray[currentIndex] = inputArray[targetIndex];
-        inputArray[targetIndex] = temp;
-    }
+		int temp = inputArray[currentIndex];
+		inputArray[currentIndex] = inputArray[targetIndex];
+		inputArray[targetIndex] = temp;
+	}
 }

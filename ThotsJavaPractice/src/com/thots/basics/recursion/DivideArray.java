@@ -21,7 +21,7 @@ public class DivideArray {
         int mid = n / 2;
         int[] left = new int[mid];
         int[] right = new int[n - mid];
-        for (int i = 0; i <mid; i++)
+        for (int i = 0; i < mid; i++)
             left[i] = inputArray[i];
         for (int i = mid, j = 0; i < n; i++, j++)
             right[j] = inputArray[i];
