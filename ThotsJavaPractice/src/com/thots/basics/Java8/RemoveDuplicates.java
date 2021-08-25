@@ -2,7 +2,6 @@ package com.thots.basics.Java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,7 +23,7 @@ public class RemoveDuplicates {
         System.out.println(uniqueList);
 
         /**
-         * Declarativ style java8
+         * Declarative style java8
          */
         List<Integer> targetList = listOfIntegers.stream().distinct().collect(Collectors.toList());
         System.out.println(targetList);
